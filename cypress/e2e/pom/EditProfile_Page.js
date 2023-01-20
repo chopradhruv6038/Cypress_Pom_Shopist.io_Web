@@ -1,6 +1,7 @@
 export class EditProfilePage{
 
-profilePictureField = '.hidden-input';    
+profilePictureField = '.hidden-input'; 
+removePhotoLink = '';   
 firstNameField = '#firstname';
 lastNameField = '#lastname';
 address01Field = '#address1';
