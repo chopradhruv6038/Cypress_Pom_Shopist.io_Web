@@ -2,47 +2,45 @@ export class ProfilePage{
 
 
 
-
-prodilePictureIcon = '.profile-picture > img';
-shippingAddressField = ':nth-child(2) > .label';
-phoneNumberField = ':nth-child(2) > .label';
-editProfile = '.button';
-
-
-assertProfilePictureIconIsDisplayed(){
-
-cy.get(this.prodilePictureIcon).should('be.visible');
-
-
-}
+editProfileBtnField = '.button';
+profilePictureImageSection = 'section.profile > .profile > :nth-child(1)';
+profilePicturNameSection = 'section.profile > .profile > :nth-child(1) > :nth-child(2)';
+addressSection = 'section.profile > .profile > :nth-child(2)';
+mobileSection = ':nth-child(3) > [data-dd-privacy="mask"]';
 
 
 
-assertShippingAddressFieldIsDisplayed(){
 
-    cy.get(this.shippingAddressField).should('be.visible');
 
-}
+assertProfilePicture(){ 
 
-assertPhoneFieldIsDisplayed(){
-
-cy.get(this.phoneNumberField).should('be.visible');
+cy.get(this.profilePictureImageSection).find('img').should('have.attr', 'src').should('include','data:image/png');
 
 
 }
 
 
-assertEditProdileBtnIsDisplayed(){
+assertFirstAndLastName(FullName){
 
-cy.get(this.editProfile).should('be.visible')
-.and('have.class', 'button')
+cy.get(this.profilePicturNameSection).should('include.text', FullName);
 
+}
+
+assertFullAddress(fullAddress){
+
+cy.get(this.addressSection).should('have.text', fullAddress);
+
+}
+
+assertMobileNumber(mobileNumber){
+
+cy.get(this.mobileSection).should('include.text', mobileNumber);
 
 }
 
 clickEditProfileBtn(){
 
-cy.get(this.editProfile).click();
+cy.get(this.editProfileBtnField).click()
 
 }
 
