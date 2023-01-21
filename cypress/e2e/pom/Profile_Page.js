@@ -46,6 +46,4 @@ cy.get(this.editProfile).click();
 
 }
 
-
-
 }
