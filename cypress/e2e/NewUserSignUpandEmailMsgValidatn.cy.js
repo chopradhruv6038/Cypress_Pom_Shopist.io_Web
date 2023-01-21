@@ -15,7 +15,7 @@ const emailverification = new EmailVerification();
 
 let profileDetails;
 
-describe('Creating a new user by entering all the details -> Validating the success msg and details entered', function(){
+describe('Creating a new user by entering all the details -> Validating the email sent msg', function(){
 
 beforeEach(()=> {
 
@@ -35,7 +35,7 @@ profileDetails = data;
 
 })
 
-it('This test will create a new user by entering details and will validate the success msg',()=> {
+it('This test will create a new user by entering details and will validate the email msg send',()=> {
 
 
 signup.clickSignUpBtnHmPG();
