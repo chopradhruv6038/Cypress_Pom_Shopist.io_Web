@@ -11,8 +11,8 @@ jobs:
       # leaving Cypress Cloud hanging ...
       fail-fast: false
       matrix:
-        # run 2 copies of the current job in parallel
-        containers: [1, 2]
+        # run 3 copies of the current job in parallel
+        containers: [1, 2, 3]
 
     steps:
       - name: Checkout 
@@ -21,7 +21,7 @@ jobs:
         uses: cypress-io/github-action@v5.0.5
         
         with:
-          browser: chrome
+          browser: firefox
           record: true
           parallel: true
   
