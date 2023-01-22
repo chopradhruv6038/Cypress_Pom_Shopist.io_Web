@@ -23,9 +23,25 @@ it('This test will validate the price, description, image and stock details of t
 
 chairspage.clickChairsLink();
 
-chairspage.assertDescPriceStockWickerChair();
+//Validating / asserting all information for all chair types 
 
-chairspage.assertWickerChairIMG();
+chairspage.assertDescPriceStockIMGWickerChair();
+
+chairspage.assertDescPriceStockIMGBlackShellChair();
+
+chairspage.assertDescPriceStockIMGWoodenStools();
+
+chairspage.assertDescPriceStockIMGUpholsteredWhiteChair();
+
+chairspage.assertDescPriceStockIMGWhiteShellChair();
+
+chairspage.assertDescPriceStockIMGModernWoodenChair();
+
+chairspage.assertDescPriceStockIMGTallWoodenStool();
+
+chairspage.assertDescPriceStockIMGPlasticWhiteChair();
+
+chairspage.assertDescPriceStockIMGUpholsteredBlackBarStool();
 
 
 })
