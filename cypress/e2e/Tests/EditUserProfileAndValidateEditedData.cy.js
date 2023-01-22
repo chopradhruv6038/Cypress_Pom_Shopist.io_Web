@@ -1,9 +1,9 @@
 
 
-import { BasePage } from "./pom/Base_Page";
-import { HomePage } from "./pom/Home_Page";
-import { ProfilePage } from "./pom/Profile_Page";
-import { EditProfilePage } from "./pom/EditProfile_Page";
+import { BasePage } from "../pom/Base_Page";
+import { HomePage } from "../pom/Home_Page";
+import { ProfilePage } from "../pom/Profile_Page";
+import { EditProfilePage } from "../pom/EditProfile_Page";
 
 
 const basepage = new BasePage();

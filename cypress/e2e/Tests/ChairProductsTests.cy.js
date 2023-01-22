@@ -1,14 +1,12 @@
-import { BasePage } from "./pom/Base_Page";
-import { HomePage } from "./pom/Home_Page";
-import { ChairsPage } from "./pom/Chairs_Page";
+import { BasePage } from "../pom/Base_Page";
+import { ChairsPage } from "../pom/Chairs_Page";
 
 
 const basepage = new BasePage();
-const homepage = new HomePage();
 const chairspage = new ChairsPage();
 
 
-describe('Validating Chair products price, description, image and stock details', function(){
+describe('This suite will Validate Chair products price, description, image and stock details', function(){
 
 beforeEach(()=> {
 
