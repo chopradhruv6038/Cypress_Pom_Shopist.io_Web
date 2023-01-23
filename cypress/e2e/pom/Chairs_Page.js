@@ -1,3 +1,4 @@
+
 export class ChairsPage{
 
 chairsLink = '.chairs > .menu-item-large-container > .menu-item-large';
@@ -63,6 +64,17 @@ expectedUpholsteredBlackBarStoolStock = 'Sold out';
 expectedUpholsteredBlackBarStoolDescription = 'Upholstered Black Barstool';
 expectedUpholsteredBlackBarStoolPrice = '$210.00';
 expectedUpholsteredBlackBarStoolIMGSrc = '_nuxt/img/9.9733e92.jpg';
+
+soldOutItemAlertBox = '.modal-sold-out--is-open > .modal-sold-out-content';
+
+expectedSoldOutItemAlertBoxText01 = 'Oops! This item is sold out.'
+expectedSoldOutItemAlertBoxText02 = 'It can'
+expectedSoldOutItemAlertBoxText03 = 't be added to your cart.'
+expectedSoldOutItemAlertBoxText04 = 'We'
+expectedSoldOutItemAlertBoxText05 = 'll let you know when this item is back in stock.'
+expectedSoldOutItemAlertBoxText06 = 'Continue shopping'
+
+ContinueBTnOnSoldOutAlert = '.modal-sold-out--is-open > .modal-sold-out-content > .modal-button';
 
 
 clickChairsLink(){
@@ -140,6 +152,43 @@ assertDescPriceStockIMGUpholsteredBlackBarStool(){
 cy.get(this.upholsteredBlackBarStool).should('have.text', ' ' + this.expectedUpholsteredBlackBarStoolStock + ' ' + this.expectedUpholsteredBlackBarStoolDescription + ' ' 
 + this.expectedUpholsteredBlackBarStoolPrice)
 .find('img').should('have.attr', 'src').should('include', this.expectedUpholsteredBlackBarStoolIMGSrc);
+
+}
+
+
+//Sold out alert box methods for assertions and clicks
+
+ClickUpholsteredWhiteChairSoldOut(){
+
+cy.get(this.upholsteredWhiteChair).click()
+
+}
+
+clickUpholsteredBlackBarStoolSoldOut(){
+
+cy.get(this.upholsteredBlackBarStool).click();
+
+}
+
+AssertSoldOutAlertBoxText(){
+
+cy.get(this.soldOutItemAlertBox).should('have.text', this.expectedSoldOutItemAlertBoxText01 + ' '
++ this.expectedSoldOutItemAlertBoxText02 + "'" + this.expectedSoldOutItemAlertBoxText03 + ' '
++ this.expectedSoldOutItemAlertBoxText04 + "'" + this.expectedSoldOutItemAlertBoxText05 + ' '
++ this.expectedSoldOutItemAlertBoxText06)
+.and('have.class', 'modal-sold-out-content')
+.and('be.visible');
+
+}
+
+clickContinueBtnOnSoldOutAlert(){
+
+    cy.get(this.ContinueBTnOnSoldOutAlert).click();
+}
+
+assertUserOnChairProductsPage(){
+
+cy.get(this.wickerChair).should('be.visible');
 
 }
 
