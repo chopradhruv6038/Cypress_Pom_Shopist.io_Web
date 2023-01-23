@@ -8,7 +8,10 @@ lastNameField = '#lastname';
 address01Field = '#address1';
 address02Field = '#address2';
 cityField = '#addressCity';
-stateField = '';
+
+stateField01 = '#addressState'
+stateField02 = '#vs1__option-13';
+
 zipCodeField = '#addressZipcode';
 mobileNumberField = '#phone';
 saveProfileField = '.inverted';
@@ -74,8 +77,10 @@ cy.get(this.cityField).type(city);
 }
 
 
-SelectState(state){
+SelectStateFrmDrpDwn(){
 
+cy.get(this.stateField01).click();
+cy.get(this.stateField02).click();
 
 
 }

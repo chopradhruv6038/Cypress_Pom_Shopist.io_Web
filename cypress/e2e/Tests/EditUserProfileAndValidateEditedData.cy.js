@@ -53,11 +53,13 @@ editprofilepage.enterAddress02(profileDetails.address02);
 
 editprofilepage.enterCity(profileDetails.city);
 
+editprofilepage.SelectStateFrmDrpDwn();
+
 editprofilepage.enterZipcode(profileDetails.zipCode);
 
 editprofilepage.enterMobileNumber(profileDetails.phoneNumber);
 
-//state field selection from dropdown left to implement**
+editprofilepage.SelectStateFrmDrpDwn();
 
 editprofilepage.clickSaveProfileBtn();
 
@@ -76,6 +78,7 @@ profilepage.assertFullAddress('Shipping address' + ' ' + profileDetails.address0
 + ' ' + profileDetails.state+',' + ' ' + profileDetails.zipCode);
 
 profilepage.assertMobileNumber(profileDetails.phoneNumber);
+
 
 
 
