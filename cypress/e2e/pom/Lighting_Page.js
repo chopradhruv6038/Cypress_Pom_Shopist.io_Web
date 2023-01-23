@@ -147,4 +147,15 @@ cy.get(this.AdjustableWallLamp).should('have.text', ' ' + this.expectedAdjustabl
 
 }
 
+clickEdisonHangingBulbsSoldOut(){
+
+    cy.get(this.edisonHangingBulbs).click();
+}
+
+assertUserOnLightingPage(){
+
+cy.get(this.edisonHangingBulbs).should('be.visible');
+
+}
+
 }

@@ -145,4 +145,16 @@ assertStockDescPriceSrcBlackVelvetSectional(){
     
 }
 
+clickTallTuftedCouchSoldOut(){
+
+cy.get(this.tallTuftedCouch).click();
+
+}
+
+assertUserOnSofaPage(){
+
+cy.get(this.tallTuftedCouch).should('be.visible');
+
+}
+
 }

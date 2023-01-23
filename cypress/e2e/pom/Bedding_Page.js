@@ -144,4 +144,23 @@ cy.get(this.cleanWhiteComforter).should('have.text', ' ' + this.expectedCleanWhi
 
 }
 
+
+clickPaneledGreyComforterSoldOut(){
+
+cy.get(this.paneledGreyComforter).click();
+
+}
+
+clickGreyEmbroideredDuvetCoverSoldOut(){
+
+cy.get(this.greyEmbroideredDuvetCover).click();
+
+}
+
+assertUserOnBeddingPage(){
+
+cy.get(this.paneledGreyComforter).should('be.visible');
+
+}
+
 }
