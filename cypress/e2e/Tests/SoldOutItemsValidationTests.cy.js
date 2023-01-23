@@ -24,15 +24,15 @@ chairspage.clickChairsLink();
 
 chairspage.ClickUpholsteredWhiteChairSoldOut();
 
-chairspage.AssertSoldOutAlertBoxText();
+basepage.AssertSoldOutAlertBoxText();
 
-chairspage.clickContinueBtnOnSoldOutAlert();
+basepage.clickContinueBtnOnSoldOutAlert();
 
 chairspage.assertUserOnChairProductsPage(); // assering user is back on chair products page.
 
 chairspage.clickUpholsteredBlackBarStoolSoldOut();
 
-chairspage.AssertSoldOutAlertBoxText();
+basepage.AssertSoldOutAlertBoxText();
 
 })
 

@@ -65,17 +65,6 @@ expectedUpholsteredBlackBarStoolDescription = 'Upholstered Black Barstool';
 expectedUpholsteredBlackBarStoolPrice = '$210.00';
 expectedUpholsteredBlackBarStoolIMGSrc = '_nuxt/img/9.9733e92.jpg';
 
-soldOutItemAlertBox = '.modal-sold-out--is-open > .modal-sold-out-content';
-
-expectedSoldOutItemAlertBoxText01 = 'Oops! This item is sold out.'
-expectedSoldOutItemAlertBoxText02 = 'It can'
-expectedSoldOutItemAlertBoxText03 = 't be added to your cart.'
-expectedSoldOutItemAlertBoxText04 = 'We'
-expectedSoldOutItemAlertBoxText05 = 'll let you know when this item is back in stock.'
-expectedSoldOutItemAlertBoxText06 = 'Continue shopping'
-
-ContinueBTnOnSoldOutAlert = '.modal-sold-out--is-open > .modal-sold-out-content > .modal-button';
-
 
 clickChairsLink(){
 
@@ -156,7 +145,7 @@ cy.get(this.upholsteredBlackBarStool).should('have.text', ' ' + this.expectedUph
 }
 
 
-//Sold out alert box methods for assertions and clicks
+//Sold out items click methods
 
 ClickUpholsteredWhiteChairSoldOut(){
 
@@ -170,21 +159,6 @@ cy.get(this.upholsteredBlackBarStool).click();
 
 }
 
-AssertSoldOutAlertBoxText(){
-
-cy.get(this.soldOutItemAlertBox).should('have.text', this.expectedSoldOutItemAlertBoxText01 + ' '
-+ this.expectedSoldOutItemAlertBoxText02 + "'" + this.expectedSoldOutItemAlertBoxText03 + ' '
-+ this.expectedSoldOutItemAlertBoxText04 + "'" + this.expectedSoldOutItemAlertBoxText05 + ' '
-+ this.expectedSoldOutItemAlertBoxText06)
-.and('have.class', 'modal-sold-out-content')
-.and('be.visible');
-
-}
-
-clickContinueBtnOnSoldOutAlert(){
-
-    cy.get(this.ContinueBTnOnSoldOutAlert).click();
-}
 
 assertUserOnChairProductsPage(){
 
