@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         # run 3 copies of the current job in parallel
-        containers: [1, 2, 3]
+        containers: [1, 2, 3, 4, 5]
 
     steps:
       - name: Checkout 
@@ -21,7 +21,7 @@ jobs:
         uses: cypress-io/github-action@v5.0.5
         
         with:
-          browser: firefox
+          browser: firefox, chrome
           record: true
           parallel: true
   
